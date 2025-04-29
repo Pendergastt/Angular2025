@@ -180,6 +180,95 @@
           }
         }
       }
+    },
+    "pruebaHugo": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/prueba-hugo",
+      "sourceRoot": "projects/prueba-hugo/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/prueba-hugo",
+            "index": "projects/prueba-hugo/src/index.html",
+            "browser": "projects/prueba-hugo/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/prueba-hugo/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/prueba-hugo/public"
+              }
+            ],
+            "styles": [
+              "projects/prueba-hugo/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "pruebaHugo:build:production"
+            },
+            "development": {
+              "buildTarget": "pruebaHugo:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/prueba-hugo/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/prueba-hugo/public"
+              }
+            ],
+            "styles": [
+              "projects/prueba-hugo/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   }
 }

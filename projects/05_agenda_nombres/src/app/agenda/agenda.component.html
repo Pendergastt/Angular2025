@@ -1,0 +1,11 @@
+Nombre: <input type="text" [(ngModel)]="nombre">
+<br>
+<br>
+<button (click)="guardar();">GUARDAR</button><button (click)="mostrar();">MOSTRAR</button>
+<br>
+<br>
+<div *ngIf="visible">
+  <h2 *ngFor="let item of agenda">
+      {{item}}
+  </h2>
+</div>
