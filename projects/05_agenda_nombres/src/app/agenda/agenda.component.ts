@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 // Vamos a retocar el ejercicio para que no añada elementos repetidos
 // SOLO QUE LO IMPIDA. NADA DE INFORMARTE. que no lo haga.
-//
+
 
 
 @Component({
