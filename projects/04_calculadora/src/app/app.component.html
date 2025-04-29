@@ -1,0 +1,15 @@
+<h1>CALCULADORA</h1>
+NUMERO 1: <input type="number" placeholder="Número 1" [(ngModel)]="numero1"> <!-- el bingind, lo que es [()] , es muy útil porque no funciona
+únicamente de html a componente como "etiqueta" para coger valor, sino que, a la vez, el valor que le asignemos a la variable en el TypeScript
+se va a reflejar en el HTML. Si le asignamos un ngmodel a un input, además de recogerlo, si le damos un valor inicial a la variable, se refleja en el html-->
+<br>
+<br>
+NUMERO 2: <input type="number" placeholder="Número 2" [(ngModel)]="numero2">
+<br>
+<br>
+<button (click)="sumar()">SUMAR</button><button (click)="multiplicar()">MULTIPLICAR</button>
+<br>
+<br>
+<div>
+  {{resultado}}
+</div>
