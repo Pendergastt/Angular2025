@@ -56,6 +56,14 @@ hacerMedia(){
 notaMayor(){
   this.masAlta=Math.max(...this.listaNotas)
 
+/*
+  this.masAlta=this.listaNotas[0];
+  this.listaNotas.forEach(nota =>{
+    if (nota>this.masAlta) this.masAlta=nota;
+  });
+  return this.masAlta;
+  */
+
 }
 
 notaMenor(){
@@ -68,5 +76,10 @@ cuantosAprobados(){
   console.log(this.aprobados+" aprobados");
 
 }
+
+
+
+
+
 
 }
