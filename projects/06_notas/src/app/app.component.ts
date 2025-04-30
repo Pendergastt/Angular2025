@@ -29,6 +29,7 @@ guardar(){
   this.notaMayor();
   this.notaMenor();
   this.cuantosAprobados();
+  //this.nota.focus(); mirar lo del focus
 
 };
 
@@ -75,10 +76,6 @@ cuantosAprobados(){
   console.log(this.aprobados+" aprobados");
 
 }
-
-
-
-
 
 
 }
