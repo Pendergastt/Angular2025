@@ -1,0 +1,13 @@
+<h1> NOTAS DE LOS ALUMNOS</h1>
+INTRODUCE LAS NOTAS<br>
+<br>
+<input type="number" [(ngModel)]="nota"><br>
+<button (click)="guardar();">GUARDAR</button><button (click)="mostrarDatos()">MOSTRAR DATOS</button>
+
+<div *ngIf="visible">
+  <br>
+    La MEDIA es {{media}}<br>
+    La nota MÁS ALTAa es {{masAlta}}<br>
+    La nota MÁS BAJA es {{masBaja}}<br>
+    El número de APROBADOS es {{aprobados}}
+</div>
