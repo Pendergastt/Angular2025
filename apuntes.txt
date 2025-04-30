@@ -1,0 +1,13 @@
+Para crear algo en angular, lo que necesitamos es un proyecto.
+El resultado va a ser lo mismo que en html pero el proceso es un poco más complejo
+
+Primero creamos un proyecto
+    Desde la línea de comandos usamos:
+    > ng new nombreApp
+
+    podemos hacerlo desde el cmd o desde la pestaña terminal del visual code studio
+
+Cuando nos metemos en la app aparecen varios archivos.
+Es en la carpeta "src" donde varias cositas. nos metemos en la appy dentro,
+lo más importante de código lo vamos a peter en el appcomponent.ts y appcomponent.html
+
