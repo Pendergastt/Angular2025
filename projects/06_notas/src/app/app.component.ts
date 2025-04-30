@@ -33,7 +33,6 @@ guardar(){
 
 mostrarDatos(){
   this.visible=!this.visible
-  console.log(this.visible);
 
 };
 
@@ -49,7 +48,6 @@ hacerMedia(){
 
   // Lo hacemos con reduce (ponemos a,n como acumulador y N como cada cosa del array)
   this.media=this.listaNotas.reduce((a,n)=>a+n)/this.listaNotas.length;
-  console.log(this.media);
 
 }
 
