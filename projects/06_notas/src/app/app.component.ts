@@ -23,6 +23,7 @@ aprobados:number;
 
 guardar(){
   if(this.nota>=0 && this.nota<=10) this.listaNotas.push(this.nota);
+  console.log(this.listaNotas);
 
   this.hacerMedia();
   this.notaMayor();
