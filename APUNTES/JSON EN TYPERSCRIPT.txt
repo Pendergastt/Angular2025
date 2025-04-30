@@ -1,0 +1,38 @@
+typescript es un lenguaje orientado a objetos.
+
+un JSON suele ser así:
+let persona= {nombre: "pepito", edad:23, email:"pepito@gmail.com};
+
+Los lenguajes orientados a objetos tienen lo que se llaman CLASES.
+
+EN TYPESCRIPT para crear una clase hacemos:
+
+
+
+es muy similar solo que el JSON es un objeto que tiene asociados unos valores.
+La clase es una plantilla; un molde. Algo a lo que hacemos referencia cuando queremos crear un objeto con unas caraterísticas concretas
+
+en el caso anterior la clase persona tiene nombre edad y correo.
+Una podría ser pepito, de 23 y pepito@24
+
+si queremos crear otro haremos:
+
+
+export class Persona{
+  nombre:string;
+  edad:number;
+  email:string;
+
+}
+
+
+let p=new Persona();
+p.nombre="Juan";
+p.edad=24;
+p.email=ppp@gmail.com;
+
+Lo primero hacemos un nuevo objeto p, que tendrá las mismas características que el molde persona.
+Luego lo que hacemos definir cada propiedad del paciente.
+
+
+
