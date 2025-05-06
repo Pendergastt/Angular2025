@@ -1,0 +1,61 @@
+<h1>AGENDA CONTACTOS</h1>
+
+NOMBRE:<br>
+<input type="text" [(ngModel)]="nombre"><br>
+APELLIDO:<br>
+<input type="text" [(ngModel)]="apellido"><br>
+TELÉFONO:<br>
+<input type="text" [(ngModel)]="telefono"><br>
+CORREO ELECTRÓNICO:<br>
+<input type="text" [(ngModel)]="correo"><br>
+<br>
+<button (click)="crearContacto();">GUARDAR</button> <button (click)="mostrar();">MOSTRAR TODOS CONTACTOS</button><br>
+<br>
+<button (click)="buscarContacto();">BUSCAR</button>
+<br>
+  <div *ngIf=buscarContacto>
+    <table>
+      <tr>
+      <th>NOMBRE</th>
+      <th>APELLIDO</th>
+      <th>TELÉFONO</th>
+      <th>CORREO ELECTRÓNICO</th>
+      <th>ELIMINAR</th>
+      </tr>
+      <tr *ngFor="let contacto of resultado">
+        <td>{{contacto.nombre}}</td>
+        <td>{{contacto.apellido}}</td>
+        <td>{{contacto.telefono}}</td>
+        <td>{{contacto.correo}}</td>
+        <td><button>BORRAR</button></td>
+      </tr>
+
+    </table>
+
+  </div>
+
+  <div *ngIf=crearContacto>
+    <table>
+      <tr>
+      <th>NOMBRE</th>
+      <th>APELLIDO</th>
+      <th>TELÉFONO</th>
+      <th>CORREO ELECTRÓNICO</th>
+      <th>ELIMINAR</th>
+      </tr>
+      <tr *ngFor="let contacto of agenda">
+        <td>{{contacto.nombre}}</td>
+        <td>{{contacto.apellido}}</td>
+        <td>{{contacto.telefono}}</td>
+        <td>{{contacto.correo}}</td>
+        <td><button>BORRAR</button></td>
+      </tr>
+
+    </table>
+
+
+
+  </div>
+
+
+
