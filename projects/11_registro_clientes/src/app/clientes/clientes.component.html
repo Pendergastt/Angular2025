@@ -1,0 +1,28 @@
+<h1>ACCESO CLIENTES</h1>
+USUARIO
+<input type="text" [(ngModel)]="usuario">
+<br>
+CONTRASEÑA
+<input type="text" [(ngModel)]="password">
+<br>
+<button (click)="validar();">VALIDAR</button><BR>
+<button (click)="registrar();">REGISTRAR</button>
+<br><br>
+  <div *ngIf="visible">
+    NOMBRE
+    <input type="text" [(ngModel)]="nombre">
+    <br>
+    USUARIO
+    <input type="text" [(ngModel)]="usuario">
+    <br>
+    PASSWORD
+    <input type="text" [(ngModel)]="password">
+    <br>
+    EMAIL
+    <input type="text" [(ngModel)]="email">
+    <br>
+    <button (click)="guardarCliente();">CREAR CLIENTE</button><BR>
+
+
+  </div>
+

@@ -1,0 +1,13 @@
+En Angular es EL COMPONENTE el  que le pide al servicio que haga las cosas que necesita.
+Le dice: necesito que me des la lista de personas que hay en la agenda, y te la da.
+
+Los componentes tienen las llamadas y los servicios las funciones concretas.
+
+Vamos a usar las INYECCIONES DE DEPENDENCIA para que el componente llame a los servicios del programa.
+
+Para que un servicio sea inyectable (para que el café te lo puedan traer) tiene que tener un decorador
+@injectable
+
+cada clase tiene que llevar su decorador. mirar constructores y decoradores.
+
+EL SERVICIO SE INYECTA EN EL COMPONENTE A TRAVÉS DE UN CONSTRUCTOR

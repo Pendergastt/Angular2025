@@ -1,0 +1,5 @@
+// Mejorar lo que es la agenda con angular, constructores y servicios (mirar ejercicios de Antonio)
+
+// Hacer la calculadora con angular y servicios (mirar ejercicio Antonio)
+
+//
