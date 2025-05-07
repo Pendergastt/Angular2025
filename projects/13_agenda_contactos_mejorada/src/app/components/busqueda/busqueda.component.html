@@ -1,0 +1,12 @@
+<div>
+  CORREO<input type="text" [(ngModel)]="correo"><br><br>
+  <button (click)="buscar()">BUSCAR</button>
+</div>
+<div *ngFor="let contacto of resultado">
+  {{contacto.nombre}}<br>
+  {{contacto.correo}}<br>
+  {{contacto.telefono}}<br>
+</div>
+
+
+
