@@ -15,15 +15,22 @@ export class RegistroComponent {
   nombre:string;
   correo:string;
   telefono:string;
+  mensaje:string;
 
   constructor(private agendaService: AgendaCompletaService){
 
   }
 
   guardarContacto(){
+    if (this.agendaService.repetido(this.correo)){
+      this.mensaje="Contacto repetido. Pon otro"
+    }
+      else{let nuevoContacto=new Contacto(this.nombre,this.correo,this.telefono);
+    this.agendaService.guardar(nuevoContacto);
+    this.mensaje="Contacto Guardado"
 
-    let nuevoContacto=new Contacto(this.nombre,this.correo,this.telefono);
-    this.agendaService.guardar(nuevoContacto)
+    };
+
 
   }
 

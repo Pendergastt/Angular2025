@@ -1,1 +1,17 @@
-<h1>PRUEBA</h1>
+<h1>AGENDA COMPLETA</h1>
+<table>
+<tr>
+  <th>NOMBRE</th>
+  <th>CORREO</th>
+  <th>TELEFONO</th>
+</tr>
+<div *ngFor="let contacto of agendaMostrar; let i=index">
+  <tr>
+  <td>{{contacto.nombre}}</td>
+  <td>{{contacto.correo}}</td>
+  <td>{{contacto.telefono}}</td>
+  <td><button (click)="eliminar(i)">ELIMINAR</button></td>
+  </tr>
+</div>
+</table>
+

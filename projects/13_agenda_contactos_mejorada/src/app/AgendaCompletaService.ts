@@ -12,7 +12,6 @@ export class AgendaCompletaService {
 
   guardar(cliente:Contacto){
     this.agendaCompleta.push(cliente);
-    alert("nuevo contacto creado");
     console.log(this.agendaCompleta);
 
   };
@@ -24,15 +23,24 @@ export class AgendaCompletaService {
     return this.resultado
 
 
+  };
 
+  repetido(correo:string):boolean{
+    return this.agendaCompleta.some(contacto=>contacto.correo==correo);
+
+  }
+
+  mostrarTodos():Contacto[]{
+
+    return this.agendaCompleta
 
   };
 
-  mostrarTodos(){
+  eliminar(posicion:number){
+    this.agendaCompleta.splice(posicion,1);
 
 
-
-  };
+  }
 
 
 }
