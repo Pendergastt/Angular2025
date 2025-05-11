@@ -1,10 +1,14 @@
-<p>balcon works!</p>
-<div *ngFor="let estancia of casaCompleta">
-  NOMBRE: {{estancia.nombre}}<br>
-  MOVIMIENTO: {{estancia.movimiento}}<br>
-  DISPARO: {{estancia.disparo}}<br>
-
-
+<h1>BALCON</h1>
+<div>
+  <img src="/cursoWorkspace/projects/pruebas_fuera_curso/public/assets/imagenes/balcon.jpg">
+</div><br>
+<br>
+<button (click)="mover()">MOVER</button><button (click)="disparar()">DISPARAR</button><br>
+<div *ngIf="moverVisible">
+  <div *ngFor="let hab of movimiento">
+    <a [routerLink]="'{{hab}}'" routerLinkActive="router-link-active">{{hab}}</a>
+  </div>
 </div>
+
 
 
