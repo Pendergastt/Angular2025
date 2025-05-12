@@ -1,0 +1,9 @@
+BACKEND
+
+SERVICIOS REST (Representational ES Transfer)
+
+es una especie d ecaja negra de código que expone al exterior unas funciones
+Básicamente podría aconsiderarse un objeto.
+
+Una caja negra, un bloque de código que ofrece una serie de funciones al exterior. ES UNIVERSAL, es decir... esstán pensadas para que cualquier programa los puedan utilizar.
+

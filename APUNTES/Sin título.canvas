@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"79ee71da69ede78f","x":-125,"y":-60,"width":165,"height":100,"type":"text","text":"CUALQUIER PROGRAMA"},
+		{"id":"65f7215d979cfd29","x":120,"y":-60,"width":120,"height":81,"type":"text","text":"HTTP"},
+		{"id":"3450ecea153421f3","x":360,"y":-60,"width":140,"height":81,"type":"text","text":"SERVICIO REST"}
+	],
+	"edges":[
+		{"id":"f21cb7fe276136b8","fromNode":"79ee71da69ede78f","fromSide":"top","toNode":"3450ecea153421f3","toSide":"top"},
+		{"id":"fa53f669a3fcab48","fromNode":"3450ecea153421f3","fromSide":"bottom","toNode":"79ee71da69ede78f","toSide":"bottom"}
+	]
+}
