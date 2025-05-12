@@ -10,6 +10,7 @@ import { map } from 'rxjs/operators';
 export class PaisesService {
 
   url:string="https://restcountries.com/v2/all"
+  regiones:Set<string>=new Set();
 
   constructor(private http:HttpClient) { }
 
@@ -26,8 +27,17 @@ export class PaisesService {
   // esto va a ser un método que devuelva una lista de continentes,
   continente():Observable<string[]>{
 
-  return this.http.get<Pais[]>(this.url).pipe(map(datos=>datos.region))
-  }
+  // cogemos la url del tipo PAIS y le hacemos pipe para manipularlo
+  // en el pipe hacemos un map para manipular el objeto y pedirle que por cada item de dentro nos pushee la region a una variable regiones
+
+    this.http.get<Pais[]>(this.url).pipe(
+      map((items: Pais[])=>items.forEach(pais =>
+        (this.regiones.add(pais.region))
+      )));
+
+      return Array.from(this.regiones)
+
+  };
 
 
 
