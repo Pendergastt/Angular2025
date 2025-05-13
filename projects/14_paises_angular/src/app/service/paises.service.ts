@@ -16,7 +16,7 @@ export class PaisesService {
 
   obtenerPaises():Observable<Pais[]>{
     // le pido al http que tome esa dirección
-    return this.http.get<Pais[]>(this.url); // esto nos devuelve un OBSERVER. el tipo de datos lo ponemos entre < >
+    return this.http.get<Pais[]>(this.url); // esto nos devuelve un OBSERVABLE. el tipo de datos lo ponemos entre < >
 
 // el observable es un ente que es como que te dice, te promete que te va a dar los datos que le estás pidiendo
 // No los obtengo en el momento pero le digo qué es lo que quiero que haga. Pero lo que hago es "suscribirme"
@@ -30,21 +30,20 @@ export class PaisesService {
   // cogemos la url del tipo PAIS y le hacemos pipe para manipularlo
   // en el pipe hacemos un map para manipular el objeto y pedirle que por cada item de dentro nos pushee la region a una variable regiones
 
-    this.http.get<Pais[]>(this.url).pipe(
-      map((items: Pais[])=>{
-        items.forEach(pais => {
-          let regionesObservable:Observable<string>;
-          regionesObservable+=pais.region.toString()
-        })
-        }
-      )
-    );
+    return this.http.get<Pais[]>(this.url).pipe(
+      map(paises=> [...new Set(paises.map((pais) => pais.region))]))
 
-      return Array.from(this.regiones)
+      // usamos los maps para modificar el array que vamos cogiendo de pais.
+      // hemos accedido a la primera capa con el primer map
+      // accedemos a la segunda capa con map para transformar los objetos solo en cada region
+      // Vamos a hacer un SET para poner todas las regiones pero sin que se repitan
+      // y luego convertimos ese SET en ARRAY con los tres puntos.
 
-  };
+  }
 
+  paisesContinente(continente:string):Observable<Pais[]>{
+    return this.http.get<Pais[]>(this.url)
+    .pipe(map((paises)=>paises.filter(p=>p.region==continente)));
 
-
-
+  }
 }

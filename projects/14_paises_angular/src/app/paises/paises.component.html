@@ -1,9 +1,8 @@
-<button (click)="verPaises()">VER PAISES</button>
-<select *ngFor="let p of paises">
-  <option>{{p.region}}</option>
+<select [(ngModel)]="continenteSeleccionado" (change)="paisesFiltrados()">
+  <option *ngFor="let t of regiones" value="t">{{t}}</option>
 </select>
-<div class="container">
-  <table *ngIf="paises.length>0">
+<div>
+  <table *ngIf="paises.length>"> REVISAR ESTO
     <tr>
       <th>Nombre</th>
       <th>Capital</th>
