@@ -31,9 +31,14 @@ export class PaisesService {
   // en el pipe hacemos un map para manipular el objeto y pedirle que por cada item de dentro nos pushee la region a una variable regiones
 
     this.http.get<Pais[]>(this.url).pipe(
-      map((items: Pais[])=>items.forEach(pais =>
-        (this.regiones.add(pais.region))
-      )));
+      map((items: Pais[])=>{
+        items.forEach(pais => {
+          let regionesObservable:Observable<string>;
+          regionesObservable+=pais.region.toString()
+        })
+        }
+      )
+    );
 
       return Array.from(this.regiones)
 
