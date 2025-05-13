@@ -11,7 +11,7 @@
    lo va a llevar a la variable provinciaSeleccionada a través del ngmodel. Luego, asociamos
    que cuando cambie de opcion ejecute la funcion municipio con el argumento del CODPROV
    correspondiente que hará que genere la lista de municipios adecuada-->
-<option>TODOS</option>
+<option value=99>TODOS</option>
 <option *ngFor="let p of provincias" value="{{p.CODPROV}}"> {{p.NOMBRE_PROVINCIA}} </option>
 </select>
 <div *ngIf="municipios">

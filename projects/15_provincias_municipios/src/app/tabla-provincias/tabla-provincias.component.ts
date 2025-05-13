@@ -14,7 +14,7 @@ import { Municipio } from '../model/municipio';
 export class TablaProvinciasComponent {
 
   provincias:Provincias[];
-  municipios:Municipio[];
+  municipios:Municipio[]=[];
   provinciaSeleccionada:number;
   todos:[]=[];//METER TODOS LOS MUNICIPIOS
 
@@ -28,7 +28,23 @@ export class TablaProvinciasComponent {
 
   }
   municipio(municipio:number){ //esto llama a que me den el json donde están solo los municipios
+    if(municipio==99){
+        this.mostrarTodos();
+
+    }else{
   this.provinciasService.idMunicipios(municipio).subscribe(datos=>this.municipios=datos)
   this.provinciasService.idMunicipios(municipio).subscribe(datos=>console.log(datos))
+    }
   }
+
+  mostrarTodos(){
+  let n=0;
+      for (let n=0;n<this.provincias.length;n++){
+        //this.provinciasService.idMunicipios(this.provincias[n].CODPROV).subscribe(datos=>console.log(datos))
+        this.provinciasService.idMunicipios(this.provincias[n].CODPROV).subscribe(datos=>{
+          this.municipios=[...this.municipios,...datos]; //No se pueden hacer push de arrays, con lo que hay que ir reescribiendo arrays como copias y añadidos
+        });
+      };
+
+    }
 }

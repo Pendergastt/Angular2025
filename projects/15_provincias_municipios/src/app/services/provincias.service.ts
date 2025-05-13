@@ -1,7 +1,7 @@
 import { Provincias } from './../model/provincias';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { filter, map, Observable } from 'rxjs';
 import { Municipio } from '../model/municipio';
 
 @Injectable({
@@ -10,7 +10,6 @@ import { Municipio } from '../model/municipio';
 export class ProvinciasService {
 
   urlProvincias:string="https://www.el-tiempo.net/api/json/v2/provincias"
-  todasProvincias:Provincias[];
 
   constructor(private httpClient: HttpClient) { }
 
@@ -33,7 +32,11 @@ return this.httpClient.get<any>(url)
 .pipe(map(jsonmunicipios=>jsonmunicipios.municipios))
 }
 
+
+
+
+
+
+
 }
-
-
 
