@@ -1,0 +1,8 @@
+<p>tabla-provincias works!</p>
+<button (click)="inicio()">INICIO</button><br>
+<button (click)="municipio(28)">DAME MADRID!</button>
+<select [(ngModel)]="provincias">
+<option *ngFor="let p of provincias" value="{{p.CODPROV}}"> {{p.NOMBRE_PROVINCIA}} </option>
+
+</select>
+
