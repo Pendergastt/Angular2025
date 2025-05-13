@@ -1,8 +1,32 @@
-<p>tabla-provincias works!</p>
-<button (click)="inicio()">INICIO</button><br>
-<button (click)="municipio(28)">DAME MADRID!</button>
-<select [(ngModel)]="provincias">
+<h1>PROVINCIAS Y MUNICIPIOS</h1>
+
+<select [(ngModel)]="provinciaSeleccionada" (change)="municipio(provinciaSeleccionada)">
+  <!-- ACORDEMONOS DE QUE EL NG MODEL HACE REFERENCIA A LA VARIABLE DE DONDE QUEREMOS TOMAR LOS DATOS
+   En este caso:
+   Creamos los options a partir del array de provincias. Asignamos a la opción NOMBRE_PROVINCIA
+   su value (QUE ES LO QUE DEVUELVE LA OPTION) el CODPROV correspondiente. Así, cuando elijamos
+   una provincia, el valor que devuelve será el numero del codigo de provindia.
+
+   Ahora el SELECT, que recogerá la devolucion de VALUE va a coger el codigo de provincia y
+   lo va a llevar a la variable provinciaSeleccionada a través del ngmodel. Luego, asociamos
+   que cuando cambie de opcion ejecute la funcion municipio con el argumento del CODPROV
+   correspondiente que hará que genere la lista de municipios adecuada-->
+<option>TODOS</option>
 <option *ngFor="let p of provincias" value="{{p.CODPROV}}"> {{p.NOMBRE_PROVINCIA}} </option>
-
 </select>
-
+<div *ngIf="municipios">
+  <table>
+    <tr>
+      <th>NOMBRE</th>
+      <th>POBLACION</th>
+      <th>SUPERFICIE</th>
+      <th>ALTITUD</th>
+    </tr>
+    <tr *ngFor="let m of municipios" class="borderinferiores">
+      <td style="text-align: left;">{{m.NOMBRE}}</td>
+      <td>{{m.POBLACION_MUNI}}</td>
+      <td>{{m.SUPERFICIE}}</td>
+      <td>{{m.ALTITUD}}</td>
+    </tr>
+  </table>
+</div>

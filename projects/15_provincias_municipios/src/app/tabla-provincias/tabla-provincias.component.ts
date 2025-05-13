@@ -15,17 +15,19 @@ export class TablaProvinciasComponent {
 
   provincias:Provincias[];
   municipios:Municipio[];
+  provinciaSeleccionada:number;
+  todos:[]=[];//METER TODOS LOS MUNICIPIOS
 
   constructor(private provinciasService:ProvinciasService){
-
+    this.inicio()
   }
 
-  inicio(){
+  inicio(){ // esta llama a que me den el json donde están las provincias
   this.provinciasService.idProvincias().subscribe(datos=>this.provincias=datos)
   this.provinciasService.idProvincias().subscribe(datos=>console.log(datos))
 
   }
-  municipio(municipio:number){
+  municipio(municipio:number){ //esto llama a que me den el json donde están solo los municipios
   this.provinciasService.idMunicipios(municipio).subscribe(datos=>this.municipios=datos)
   this.provinciasService.idMunicipios(municipio).subscribe(datos=>console.log(datos))
   }
