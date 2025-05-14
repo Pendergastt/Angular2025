@@ -1,0 +1,26 @@
+<p>ES EL BUSCAR BUENO</p>
+<input [(ngModel)]="tematica" placeholder="Introduce una temática"><br>
+<button (click)="buscar(tematica)">BUSCAR</button><br>
+<br>
+<div>
+  <table *ngFor="let p of resultado">
+    <tr>
+      <tr>
+        <td>
+          {{p.url}}
+        </td>
+     </tr>
+      <tr>
+        <td>
+          {{p.tematica}}
+        </td>
+     </tr>
+      <tr>
+        <td>
+          {{p.descripcion}}
+        </td>
+      </tr>
+    <hr>
+
+  </table>
+</div>

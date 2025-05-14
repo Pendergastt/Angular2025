@@ -7,3 +7,40 @@ Básicamente podría aconsiderarse un objeto.
 
 Una caja negra, un bloque de código que ofrece una serie de funciones al exterior. ES UNIVERSAL, es decir... esstán pensadas para que cualquier programa los puedan utilizar.
 
+
+Para enviar datos a APIS REST y estas cosas necesitamos saber cómo se envían los datos
+
+Se pueden enviar como path
+queryString
+
+
+
+
+
+METODOS HTTP:
+
+hay 4 ordenes principales
+
+GET: Peticiones de datos. Las usamos cuando el backend te va a entregar datos, por norma general.
+generalmente los datos se envían con path variables o querystring
+
+POST: las usamos generalmente para altas de datos
+generalmente envío en cuerpo con form-urlencoded o JSON
+
+PUT: las usamos para actualizaciones normalmente.
+igual que en post, generalmente.
+
+DELETE: para eliminaciones.
+similar a get. querystring o pathvariables
+
+
+
+si mandamos cosas con form urlencoded
+DOS COSAS important_devices
+vamos a necesitar crear un objeto llamado httpHeader() y otro HTTPParams()
+creamos los parámetros con param=Set(param...)
+
+y luego le tenemos que decir 
+
+
+
