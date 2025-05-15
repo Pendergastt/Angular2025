@@ -1,0 +1,59 @@
+Pagina similar a dracotienda/dungeon Marvels/generacion X
+
+PAGINAS/COMPONENTES
+
+  PRINCIPAL
+  PAGINA JUEGO (Plantilla y cuando eliges juego muestra los datos de ese juego) o una para cada juego?
+  CARRITO
+    eliminar articulos
+    añadir articulos
+    pagar
+    volver (sin quitar carrito)
+  Buscador/buscador especial
+  USUARIO
+    historial
+    puntos
+  ALMACEN (acceso solo administradores)
+    básico. click "+" para añadir como si fuera pedido
+    añadir un nuevo juego.
+  opiniones (formulario consulta)
+
+BASES DATOS
+  
+  ARTICULO
+-----------
+  id.
+  nombre.
+  tipo.
+  jugadoresmin.
+  jugadoresmax.
+  dificultad.
+
+
+  USUARIOS
+-----------
+  id.
+  nombre.
+  apellido.
+  correo.
+  direccion.
+  telefono.
+
+
+  HISTORIAL PEDIDOS (propio de usuario. crear con cuenta)
+------------
+  id compra.
+  articulos[].
+  fecha.
+  cantidad.
+
+
+  ALMACEN
+------------
+  idArticulo.
+  TIPO (juego/accesorio).
+  nombre.
+  cantidad.
+
+
+
