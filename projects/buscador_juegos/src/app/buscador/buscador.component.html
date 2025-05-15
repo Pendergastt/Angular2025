@@ -1,2 +1,14 @@
 <p>buscador works!</p>
-<button (click)="inicio('root')">ROOT</button>
+Nombre <input [(ngModel)]="nombre"><br>
+Tipo <input [(ngModel)]="tipo"><br>
+Jugadores Mínimos <input [(ngModel)]="jugadoresMin"><br>
+Jugadores Máximos <input [(ngModel)]="jugadoresMax"><br>
+Dificultad <input [(ngModel)]="dificultad"><br>
+<button (click)="agregar()">AGREGAR</button><br>
+<button (click)="descargar()">DESCARGAR</button><br>
+<button (click)="consultar()">CONSULTAR</button><br>
+<input type="file" (change)="leer($event)">
+
+
+
+
