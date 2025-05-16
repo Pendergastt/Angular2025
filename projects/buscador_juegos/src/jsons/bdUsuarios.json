@@ -1,0 +1,36 @@
+[
+  {
+    "idUsuario":"0001",
+    "nombre":"Luis",
+    "apellido":"Ubeda",
+    "nombreUsuario":"pendergastt",
+    "password":"password1",
+    "tipoUsuario":"admin",
+    "correo":"penddergast@gmail.com",
+    "direccion":"camarena",
+    "telefono":"679352384"
+},
+{
+  "idUsuario":"0002",
+  "nombre":"Juan",
+  "apellido":"Perez",
+  "nombreUsuario":"JuanPe",
+  "password":"password2",
+  "tipoUsuario":"usuario",
+  "correo":"juanpe@gmail.com",
+  "direccion":"blabla",
+  "telefono":"98234"
+},
+{
+  "idUsuario":"0003",
+  "nombre":"Pedro",
+  "apellido":"Pil",
+  "nombreUsuario":"PPil",
+  "password":"password3",
+  "tipoUsuario":"usuario",
+  "correo":"pepil@gmail.com",
+  "direccion":"lolos",
+  "telefono":"64565"
+}
+
+]

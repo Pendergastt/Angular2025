@@ -19,7 +19,7 @@ PAGINAS/COMPONENTES
   opiniones (formulario consulta)
 
 BASES DATOS
-  
+
   ARTICULO
 -----------
   id.
@@ -32,12 +32,14 @@ BASES DATOS
 
   USUARIOS
 -----------
-  id.
-  nombre.
-  apellido.
-  correo.
-  direccion.
-  telefono.
+  idUsuario:string;
+  nombre:string;
+  apellido:string;
+  nombreUsuario:string;
+  tipoUsuario:string;
+  correo:string;
+  direccion:string;
+  telefono:number;
 
 
   HISTORIAL PEDIDOS (propio de usuario. crear con cuenta)
