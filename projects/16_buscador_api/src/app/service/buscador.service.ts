@@ -13,6 +13,7 @@ export class BuscadorService {
    }
 
    buscador="http://localhost:8000/buscador/";
+   vacio:boolean=false;
 
    buscar(tematica:string):Observable<Item[]>{
 
@@ -32,10 +33,14 @@ export class BuscadorService {
    }
 
    eliminar(tematica:string){
-    return this.http.delete<Item>(this.buscador + "eliminar", {params:{tematica:tematica}});
+
+    this.buscar(tematica).subscribe(datos=>{if(datos.length<1)this.vacio=true});
+    this.buscar(tematica).subscribe(datos=>{if(datos.length<1)this.vacio=true;console.log(datos.length)});
+    console.log(this.vacio)
 
 
+     if (this.vacio==true ){console.log("NO HAY PAGINAS DE ESA CATEGORIA");this.vacio=false;}
+      return this.http.delete<Item>(this.buscador + "eliminar", {params:{tematica:tematica}});}
 
-   }
 
 }

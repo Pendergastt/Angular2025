@@ -20,6 +20,7 @@ resultado:Item[]=[];
 
 buscar(tematica:string){
 this.buscadorService.buscar(tematica).subscribe(datos=>this.resultado=datos)
+this.buscadorService.buscar(tematica).subscribe(datos=>console.log(datos.length))
 console.log(this.resultado)
 
 };
