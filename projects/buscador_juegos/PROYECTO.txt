@@ -58,4 +58,9 @@ BASES DATOS
   cantidad.
 
 
+probar:
+mirar las llamadas del json server
+o hacer un array fijo para probar cómo lo recorre y pide info.
+crear las bases de datos
+
 
