@@ -4,6 +4,8 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Usuario } from '../model/usuario';
 import { Comprobar } from '../model/comprobar';
+import { ConsultaAPIService } from '../services/consulta-api.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-usuarios-componente',
@@ -15,15 +17,15 @@ export class UsuariosComponenteComponent {
 
   nombreUsuario:string;
   password:string;
-  respuesta:Comprobar;
+  respuesta:boolean;
 
 
-constructor(private loginService:LoginService){}
+constructor(private consultaApi:ConsultaAPIService){}
 
 loginUsuario(usuario:string,password:string){
   console.log(`usuario:${usuario}, contraseña:${password}`)
-  this.loginService.loginUsuario(usuario,password).subscribe(datos=>console.log(datos))
-
+  this.respuesta=this.consultaApi.buscarUsuario(usuario,password);
+  console.log(this.respuesta)
 
 }
 

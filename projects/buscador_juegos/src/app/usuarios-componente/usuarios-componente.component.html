@@ -2,3 +2,6 @@
 <input [(ngModel)]="nombreUsuario"><br>
 <input [(ngModel)]="password"><br>
 <button (click)="loginUsuario(nombreUsuario,password)">LOG IN</button>
+<br>
+<br>
+<div *ngIf="respuesta">BIENVENIDO {{nombreUsuario}} </div>
