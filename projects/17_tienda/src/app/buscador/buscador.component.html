@@ -1,0 +1,13 @@
+<p>buscador works!</p>
+busca una categoria de estas<br>
+
+Electronica, Ropa, Alimentos, Juguetes, Muebles, Deportes<br>
+<input type="number" [(ngModel)]="idCategoria"><br>
+<select (change)="buscarCategoria()">
+  <option *ngFor="let p of categorias">{{p.nombre}}</option>
+</select>
+<div *ngFor="let c of productos">
+  {{c.denominacion}}<br>
+  {{c.precio}}<br>
+
+</div>

@@ -40,7 +40,22 @@ DOS COSAS important_devices
 vamos a necesitar crear un objeto llamado httpHeader() y otro HTTPParams()
 creamos los parámetros con param=Set(param...)
 
-y luego le tenemos que decir 
+
+
+VAMOS A APRENDER A CREAR BACKEND CON NODE.JS
+
+El backend puede programarse sobre varios lenguajes node.js, JavaEE(enterprise edition)...
+pero para ello necesitamos un servidor web. El cliente (la aplicación angular) hace las llamadas a HTTP.
+
+Es el servidor web el que "dialoga" con el servicio REST.
+
+NEST es el FRAMEWORK que ayuda y genera todo lo que necesitamos para el backend.
+NEST.js está BASADO EN EXPRESS que utiliza Typescript como lenguaje pero no en el lado del cliente(angular) sino en el del servidor.
+
+Vamos a seguir lo mismo que hemos estado trabajando con angular. Separar el service, los modulos...
+APRENDER BASES DE DATOS RELACIONALES.
+
+
 
 
 

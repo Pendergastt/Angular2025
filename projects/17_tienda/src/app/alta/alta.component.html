@@ -1,0 +1,10 @@
+<p>alta works!</p>
+codigo: <input type="number" [(ngModel)]="producto.codigo"> <!-- Hacemos rerefencia directamente a la propiedad-->
+denominacion: <input type="text" [(ngModel)]="producto.denominacion">
+precio: <input type="number" [(ngModel)]="producto.precio">
+categoria:
+<select>
+  <option *ngFor="let c of categorias">{{c.nombre}}</option>
+</select>
+<br>
+<button (click)="altaProducto()">AÑADIR PRODUCTO</button>
