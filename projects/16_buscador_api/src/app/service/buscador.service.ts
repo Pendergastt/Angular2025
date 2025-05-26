@@ -12,13 +12,16 @@ export class BuscadorService {
 
    }
 
-   buscador="http://localhost:8000/buscador/";
+   //buscador="http://localhost:8000/buscador/";
+    buscador="http://localhost:3000/buscador/";
+
    vacio:boolean=false;
 
    buscar(tematica:string):Observable<Item[]>{
 
-    return this.http.get<Item[]>(this.buscador+"buscar",{params:{tematica:tematica}});
-  // return this.http.get<Item[]>(`${this.buscador}/buscar?tematica=tematica}`);
+    // return this.http.get<Item[]>(this.buscador+"buscar",{params:{tematica:tematica}});
+    //return this.http.get<Item[]>(`${this.buscador}/buscar?tematica=tematica}`);
+    return this.http.get<Item[]>(`${this.buscador}buscar/${tematica}`);
 
 
    }
