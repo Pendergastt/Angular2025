@@ -1,5 +1,5 @@
 <select [(ngModel)]="continenteSeleccionado" (change)="paisesFiltrados()">
-  <option *ngFor="let t of continentes" value="t">{{t}}</option>
+  <option *ngFor="let t of continentes" value={{t}}>{{t}}</option>
 </select>
 <div>
   <table> REVISAR ESTO

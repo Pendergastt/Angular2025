@@ -30,7 +30,7 @@ paisesFiltrados():void{
 // En la suscripción al observable le decimoslo (entre paréntesis) que tiene que hacer con los datos de la respuesta.
 // En este caso los datos los guarda en la variable paises.
   this.paisesService.paisesContinente(this.continenteSeleccionado).subscribe(datos=>this.paises=datos)
-
+  console.log(this.paises)
   //lo que hace esta funcion es llamar al servicio paises continente con el continente seleccionado que le demos y nos suscribimos.
   // Ese observable va a devolver un filtro de paises en funcion del continente que le ponemos y decimos que los datos
   // nos los ponga en paises y ESO ES LO QUE LUEGO MOSTRAREMOS
