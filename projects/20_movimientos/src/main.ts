@@ -1,6 +1,6 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
-import { AltaComponent } from './app/components/alta/alta.component';
+import { AppComponent } from './app/app.component';
 
-bootstrapApplication(AltaComponent, appConfig)
+bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));
