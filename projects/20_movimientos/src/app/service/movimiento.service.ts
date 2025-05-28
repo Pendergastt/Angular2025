@@ -20,7 +20,7 @@ buscarPorCuenta(cuenta:number){
 }
 
 buscarPorFecha(fechaInicio:Date,fechaFinal:Date):Observable<Movimiento[]>{
-  return this.http.get<Movimiento[]>(`${this.url}/movimientos/fecha?fechaInicio=${fechaInicio}&fechaFinal=${fechaFinal}`);
+  return this.http.get<Movimiento[]>(`${this.url}/fecha?fechaInicio=${fechaInicio}&fechaFinal=${fechaFinal}`);
 }
 
 }
