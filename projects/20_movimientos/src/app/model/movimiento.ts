@@ -5,7 +5,7 @@ export class Movimiento{
     cantidad:number;
     operacion:string;
 
-    constructor(idCuenta:number,fecha:Date,cantidad:number,operacion:string){
+    constructor(idCuenta?:number,fecha?:Date,cantidad?:number,operacion?:string){
 
         this.idCuenta=idCuenta;
         this.fecha=fecha;

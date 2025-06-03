@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Movimiento } from '../../model/movimiento';
 import { FormsModule } from '@angular/forms';
 import { MovimientoService } from '../../service/movimiento.service';
+import { Movimiento } from '../../model/movimiento';
 
 @Component({
   selector: 'app-movimientos',
@@ -17,10 +17,11 @@ export class MovimientosComponent {
     fechaInicio:Date;
     fechaFinal:Date;
     resultado:Movimiento[]=[];
+    resultadoFechas:Movimiento[]=[];
 
 
 buscarPorFecha(fechaInicio:Date,fechaFinal:Date){
-  this.movimientoService.buscarPorFecha(fechaInicio,fechaFinal).subscribe(data=>this.resultado=data)
+  this.movimientoService.buscarPorFecha(fechaInicio,fechaFinal).subscribe(data=>this.resultadoFechas=data)
 
 }
 

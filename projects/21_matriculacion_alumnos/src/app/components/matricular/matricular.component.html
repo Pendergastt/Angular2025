@@ -1,0 +1,13 @@
+<h1>MATRICULACION DE ALUMNOS</h1>
+
+<select [(ngModel)]="curso" (change)="mostrarAlumnosMatricular()">
+  <option *ngFor="let item of listaCursos" value="{{item.idCurso}}">{{item.nombre}}</option>
+</select>
+
+<br><br>
+
+<select>
+  <option *ngFor="let item of alumnosParaMatricular">{{item.usuario}}</option>
+</select>
+<br><br>
+
