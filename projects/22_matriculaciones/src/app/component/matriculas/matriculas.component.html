@@ -1,0 +1,23 @@
+FUNCIONA
+<div class="main_matriculacion_container">
+<div>
+  <select [(ngModel)]="cursoSeleccionado" (change)="mostrarMatriculas(cursoSeleccionado)">
+  <option *ngFor="let curso of listaCursos" value="{{curso.idCurso}}">{{curso.nombre}}</option>
+
+
+  </select>
+
+  <table>
+    <tr>
+      <th>NOMBRE</th><th>EMAIL</th><th>CURSO</th><th>NOTA</th>
+    </tr>
+    <tr *ngFor="let m of listaMatriculas">
+      <td>{{m.nombre}}</td>
+      <td>{{m.email}}</td>
+      <td>{{m.curso}}</td>
+      <td>{{m.nota}}</td>
+    </tr>
+  </table>
+</div>
+</div>
+

@@ -32,9 +32,11 @@ mostrarAlumnosMatricular(){
 }
 
 matricular(){
-  const nuevaMatricula:Matricula=new Matricula(this.alumnoSeleccionado,this.cursoSeleccionado);
+
+  const nuevaMatricula:Matricula=new Matricula(this.alumnoSeleccionado,this.curso);
   this.matricularService.matricular(nuevaMatricula)
 
+  console.log(nuevaMatricula)
 
 }
 

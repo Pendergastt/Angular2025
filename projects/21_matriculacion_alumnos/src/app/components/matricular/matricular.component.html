@@ -6,8 +6,13 @@
 
 <br><br>
 
-<select>
+<select [(ngModel)]="alumnoSeleccionado">
   <option *ngFor="let item of alumnosParaMatricular">{{item.usuario}}</option>
 </select>
 <br><br>
+<button (click)="matricular()">Matricular</button><br>
+<br>
+
+////// NUEVO CURSO /////
+
 
