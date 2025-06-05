@@ -14,7 +14,6 @@ export class MatriculasService {
   ) {
     this.listaCursos()
   }
-
   cursos:Curso[]=[]
 
    listaCursos():Observable<Curso[]>{
