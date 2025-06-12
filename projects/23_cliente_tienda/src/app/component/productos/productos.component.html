@@ -1,0 +1,15 @@
+<div class="container">
+  <button (click)="mostrarProductos()">MOSTRAR PRODUCTOS</button><br>
+  <table>
+    <thead>
+      <th>Producto</th>
+      <th>Precio</th>
+      <th>Stock</th>
+    </thead>
+    <tbody *ngFor="let m of listaProductos">
+      <td>{{ m.producto }}</td>
+      <td>{{ m.precioUnitario }}</td>
+      <td>{{ m.stock }}</td>
+    </tbody>
+  </table>
+</div>
