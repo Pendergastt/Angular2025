@@ -2252,6 +2252,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "projects/24_cliente_libreria/src/styles.css"
             ],
             "scripts": []
@@ -2310,7 +2311,186 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "projects/24_cliente_libreria/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "25_calculadora_test": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/25_calculadora_test",
+      "sourceRoot": "projects/25_calculadora_test/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/25_calculadora_test",
+            "index": "projects/25_calculadora_test/src/index.html",
+            "browser": "projects/25_calculadora_test/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/25_calculadora_test/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/25_calculadora_test/public"
+              }
+            ],
+            "styles": [
+              "projects/25_calculadora_test/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "25_calculadora_test:build:production"
+            },
+            "development": {
+              "buildTarget": "25_calculadora_test:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/25_calculadora_test/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/25_calculadora_test/public"
+              }
+            ],
+            "styles": [
+              "projects/25_calculadora_test/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "26_agenda_testing": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/26_agenda_testing",
+      "sourceRoot": "projects/26_agenda_testing/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/26_agenda_testing",
+            "index": "projects/26_agenda_testing/src/index.html",
+            "browser": "projects/26_agenda_testing/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/26_agenda_testing/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/26_agenda_testing/public"
+              }
+            ],
+            "styles": [
+              "projects/26_agenda_testing/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "26_agenda_testing:build:production"
+            },
+            "development": {
+              "buildTarget": "26_agenda_testing:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/26_agenda_testing/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/26_agenda_testing/public"
+              }
+            ],
+            "styles": [
+              "projects/26_agenda_testing/src/styles.css"
             ],
             "scripts": []
           }

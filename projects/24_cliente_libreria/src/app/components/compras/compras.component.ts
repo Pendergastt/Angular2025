@@ -20,5 +20,4 @@ export class ComprasComponent {
 compras:Compra[];
 
 
-
 }

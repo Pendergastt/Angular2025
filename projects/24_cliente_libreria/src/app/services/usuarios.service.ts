@@ -16,14 +16,15 @@ export class UsuariosService {
   urlConsulta="http://localhost:3000/libreria"
   usuarioVerificado:Usuario;
 
-verificarUsuario(usuario:Usuario):Observable<Usuario>{
-  
-  return this.http.post<Usuario>(`${this.urlVerificar}`,usuario);
+verificarUsuario(usuario:string,password:string):Observable<Usuario>{
+  let user:Usuario= new Usuario(usuario,password)
+
+  return this.http.post<Usuario>(`${this.urlVerificar}`,user);
 
 }
 
 consultarCatalogo(){
-  return this.http.get<Libro[]>(`${this.urlConsulta}/catalogo`);
+  return this.http.get<Libro[]>(`${this.urlConsulta}/catalogo`,{withCredentials:true});
 }
 
 consultarCompras(){
