@@ -16,10 +16,10 @@ export class UsuariosService {
   urlConsulta="http://localhost:3000/libreria"
   usuarioVerificado:Usuario;
 
-verificarUsuario(usuario:string,password:string):Observable<Usuario>{
-  let user:Usuario= new Usuario(usuario,password)
+verificarUsuario(usuario:Usuario):Observable<Usuario>{
+  //let user:Usuario= new Usuario(usuario,password)
 
-  return this.http.post<Usuario>(`${this.urlVerificar}`,user);
+  return this.http.post<Usuario>(`${this.urlVerificar}`,usuario);
 
 }
 

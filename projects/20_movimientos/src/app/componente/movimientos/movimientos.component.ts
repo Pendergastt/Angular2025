@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MovimientoService } from '../../service/movimiento.service';
 import { Movimiento } from '../../model/movimiento';
+import { FechaPersonalPipe } from '../../pipes/fecha-personal.pipe';
 
 @Component({
   selector: 'app-movimientos',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, FechaPersonalPipe],
   templateUrl: './movimientos.component.html',
   styleUrl: './movimientos.component.css'
 })

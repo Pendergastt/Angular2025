@@ -8,7 +8,7 @@ FECHA FINAL <input type="date" [(ngModel)]="fechaFinal"><br><br>
 <button (click)="buscarPorFecha(fechaInicio,fechaFinal)">BUSCAR POR FECHA</button><br>
 
 <div *ngFor="let mov of resultadoFechas">
-    <p>{{mov.fecha}}</p>
+    <p>{{mov.fecha|fechaPersonal}}</p>
     <p>{{mov.idCuenta}}</p>
     <p>{{mov.cantidad}}</p>
     <p>{{mov.operacion}}</p>
